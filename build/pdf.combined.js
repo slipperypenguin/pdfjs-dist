@@ -51895,6 +51895,7 @@ function createRequestOptions(url, headers) {
     port: url.port,
     path: url.path,
     method: 'GET',
+		credentials: 'include',
     headers: headers
   };
 }
@@ -52053,7 +52054,7 @@ function createFetchOptions(headers, withCredentials) {
     method: 'GET',
     headers: headers,
     mode: 'cors',
-    credentials: withCredentials ? 'include' : 'same-origin',
+    credentials: 'include',
     redirect: 'follow'
   };
 }
